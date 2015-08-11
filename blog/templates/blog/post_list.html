@@ -18,7 +18,7 @@
 
     <body>
 
-        <div>
+        <div class="page-header">
             <h1><a href="/">Kojo's Django Girls Tutorial Blog</a></h1>
         </div>
 
@@ -28,13 +28,22 @@
             <p>A BLOG, coming Soon!!</p>
         </div>
 
-        {% for post in posts %}
-            <div>
-                <p>published: {{ post.published_date }}</p>
-                <h1><a href="">{{ post.title }}</a></h1>
-                <p>{{ post.text|linebreaks }}</p>
+        <!-- New styles for blog posts -->
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                    {% for post in posts %}
+                        <div class="post">
+                            <div class="date">
+                                {{ post.published_date }}
+                            </div>
+                            <h1><a href="">{{ post.title }}</a></h1>
+                            <p>{{ post.text|linebreaks }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
             </div>
-        {% endfor %}
+        </div>
 
     </body>
 </html>
