@@ -1,0 +1,9 @@
+/*I know there's a preferred 'style' for ordering CSS. I need to look it up*/
+h1 a {
+    color: #ff0000;
+    font-family: 'Lobster';
+}
+
+body {
+    padding-left: 15px;
+}
